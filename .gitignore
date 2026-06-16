@@ -1,0 +1,11 @@
+.idea/
+.vscode/
+*.iml
+target/
+.env
+*.log
+
+# In the root/integration repo, services are external repositories.
+# Keep local clones here for development, but do not commit them to this repo.
+services/*
+!services/.gitkeep

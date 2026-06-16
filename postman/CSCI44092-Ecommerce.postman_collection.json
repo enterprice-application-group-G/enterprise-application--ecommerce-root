@@ -1,0 +1,52 @@
+{
+  "info": {
+    "name": "CSCI44092 Ecommerce Microservices",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "productBaseUrl", "value": "http://localhost:8081" },
+    { "key": "orderBaseUrl", "value": "http://localhost:8082" },
+    { "key": "productId", "value": "1" }
+  ],
+  "item": [
+    {
+      "name": "Create Product",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "url": "{{productBaseUrl}}/products",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Wireless Mouse\",\n  \"description\": \"Ergonomic USB-C mouse\",\n  \"category\": \"Electronics\",\n  \"stock\": 50,\n  \"unitPrice\": 24.99\n}"
+        }
+      }
+    },
+    {
+      "name": "Get Product by ID",
+      "request": {
+        "method": "GET",
+        "url": "{{productBaseUrl}}/products/{{productId}}"
+      }
+    },
+    {
+      "name": "Delete Product",
+      "request": {
+        "method": "DELETE",
+        "url": "{{productBaseUrl}}/products/{{productId}}"
+      }
+    },
+    {
+      "name": "Create Order",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "url": "{{orderBaseUrl}}/orders",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"customerId\": \"CUST-1001\",\n  \"productId\": {{productId}},\n  \"quantity\": 2\n}"
+        }
+      }
+    }
+  ]
+}
+
