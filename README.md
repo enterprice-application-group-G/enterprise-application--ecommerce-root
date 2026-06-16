@@ -1,6 +1,6 @@
 # Project Implementation Walkthrough
 
-Great news! The local development phases of the CSCI 44092 group project are complete. The microservices are fully built, tested, and containerized.
+The local development phases of the CSCI 44092 group project are complete. The microservices are fully built, tested, and containerized.
 
 ## What has been accomplished:
 
