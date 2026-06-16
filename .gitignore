@@ -1,9 +1,34 @@
+# IDE and local files
 .idea/
 .vscode/
 *.iml
-target/
 .env
 *.log
+
+# Build output
+target/
+build/
+dist/
+
+# Python/tooling leftovers from GitHub template
+__pycache__/
+*.py[codz]
+*$py.class
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+.venv/
+venv/
+env/
+
+# Local infrastructure data
+mnesia/
+rabbitmq/
+rabbitmq-data/
+postgres-data/
 
 # In the root/integration repo, services are external repositories.
 # Keep local clones here for development, but do not commit them to this repo.

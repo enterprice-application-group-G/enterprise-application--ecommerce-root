@@ -21,18 +21,18 @@ This root project connects them with Docker Compose and contains shared project 
 
 ```text
 .
-├── database/
-│   └── init.sql
-├── docs/
-├── jmeter/
-├── postman/
-├── services/                 # Local service clones only, ignored by this repo
-│   ├── product-service/
-│   ├── order-service/
-│   └── notification-service/
-├── .env.example
-├── docker-compose.yml
-└── docker-compose.local.yml
+|-- database/
+|   `-- init.sql
+|-- docs/
+|-- jmeter/
+|-- postman/
+|-- services/                 # Local service clones only, ignored by this repo
+|   |-- product-service/
+|   |-- order-service/
+|   `-- notification-service/
+|-- .env.example
+|-- docker-compose.yml
+`-- docker-compose.local.yml
 ```
 
 ## Final Submission Mode: Docker Hub Images
@@ -101,4 +101,3 @@ This builds the three services locally and still uses the same shared PostgreSQL
 5. Order Service stores the order in PostgreSQL.
 6. Order Service publishes an event to RabbitMQ.
 7. Notification Service consumes the event and logs a mock notification.
-
