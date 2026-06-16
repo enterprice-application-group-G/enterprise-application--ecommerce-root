@@ -1,0 +1,16 @@
+services:
+  product-service:
+    image: product-service:local
+    build:
+      context: ./services/product-service
+
+  order-service:
+    image: order-service:local
+    build:
+      context: ./services/order-service
+
+  notification-service:
+    image: notification-service:local
+    build:
+      context: ./services/notification-service
+
